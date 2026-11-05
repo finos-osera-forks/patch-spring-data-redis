@@ -1,7 +1,7 @@
 # Licensed under the Apache License, Version 2.0: https://www.apache.org/licenses/LICENSE-2.0
 schema: osera-patch-evidence/0.1.0
 producer: moderne
-release: 2.7.18.1-osera-00007
+release: 2.7.18.1-osera-00008
 baseline: v2.7.18+patch.baseline
 fixes:
   - cve: CVE-2026-41717
@@ -59,12 +59,11 @@ fixes:
     basis: adapted
     artifacts:
       - org.springframework.data:spring-data-rest-webmvc
-    note: New in this release; ported onto 2021.2.18; fixed at 3.7.18.1-backpatch-00007 (backpatch-spring-data-rest@45e7ea5).
+    note: Carried from 2021.2.18.1-backpatch-00007; ported onto 2021.2.18; fixed at 3.7.18.1-backpatch-00007 (backpatch-spring-data-rest@45e7ea5).
 tests:
-  commit: 0bd9fa7866a8ed2ef03c9413e6bb8d5f275c5af7
+  commit: 29a1465b3c6a4873bad2ddedf2912f9881c0b360
   command: none in this repository
   runtime: none, no build or test ran for this release
-  report: spring-data-rest-webmvc-3.7.18.1-osera-00007-tests.zip
-  report_sha256: bf4e1e503099eedd197ab4b0b313fa0c419ac52a4410e32ef2bc990e4816cfa9
+  report: carried, see the evidence of the release named in the note
   result: pass
-  note: this release changes nothing in this repository, nothing ran here; its test provenance is spring-data-2021.2 2021.2.18.1-osera-00007 in finos-osera-forks/patch-spring-data-bom at v2021.2.18.1-osera-00007, whose .osera/patch-evidence.yaml records the tests that ran
+  note: this release changes nothing in this repository, nothing ran here; its test provenance is spring-data-2021.2 2021.2.18.1-osera-00008 in finos-osera-forks/patch-spring-data-bom at v2021.2.18.1-osera-00008, whose .osera/patch-evidence.yaml records the tests that ran
