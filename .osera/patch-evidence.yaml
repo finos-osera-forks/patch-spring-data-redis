@@ -1,7 +1,7 @@
 # Licensed under the Apache License, Version 2.0: https://www.apache.org/licenses/LICENSE-2.0
 schema: osera-patch-evidence/0.1.0
 producer: moderne
-release: 2.7.18.1-osera-00011
+release: 2.7.18.1-osera-00012
 baseline: v2.7.18+patch.baseline
 fixes:
   - cve: CVE-2026-41717
@@ -83,12 +83,20 @@ fixes:
     basis: adapted
     artifacts:
       - org.springframework.data:spring-data-rest-webmvc
-    note: New in this release; ported onto 2021.2.18; fixed at 3.7.18.1-backpatch-00011 (backpatch-spring-data-rest@8616143).
+    note: Carried from 2021.2.18.1-backpatch-00011; ported onto 2021.2.18; fixed at 3.7.18.1-backpatch-00011 (backpatch-spring-data-rest@8616143).
+  - cve: CVE-2026-41837
+    upstream_fix_url: https://github.com/spring-projects/spring-data-rest/commit/f1bcf063ae959e97221304f49130d52805f8ac86
+    advisory_url: https://nvd.nist.gov/vuln/detail/CVE-2026-41837
+    patch_commit_url: https://github.com/moderne-backpatch-alliance/backpatch-spring-data-rest/commit/f019300
+    basis: adapted
+    artifacts:
+      - org.springframework.data:spring-data-rest-webmvc
+    note: New in this release; ported onto 2021.2.18; fixed at 3.7.18.1-backpatch-00012 (backpatch-spring-data-rest@f019300).
 tests:
-  commit: 69f3cea8f84936a2ecb6b347c6ffec4245732e24
+  commit: 5bf1c957a87401d4e79db9eb5158bea5d6b4f576
   command: none in this repository
   runtime: none, no build or test ran for this release
-  report: spring-data-rest-webmvc-3.7.18.1-osera-00011-tests.zip
-  report_sha256: b6f37de15a7ba6c0531400fafb4b05f67506cc49143cfb5fb54b515794a6c490
+  report: spring-data-rest-webmvc-3.7.18.1-osera-00012-tests.zip
+  report_sha256: a72ed062c2308cae2fbb8335cb455a0f157d5752cae5d81ce217a4abc7707121
   result: pass
-  note: this release changes nothing in this repository, nothing ran here; its test provenance is spring-data-2021.2 2021.2.18.1-osera-00011 in finos-osera-forks/patch-spring-data-bom at v2021.2.18.1-osera-00011, whose .osera/patch-evidence.yaml records the tests that ran
+  note: this release changes nothing in this repository, nothing ran here; its test provenance is spring-data-2021.2 2021.2.18.1-osera-00012 in finos-osera-forks/patch-spring-data-bom at v2021.2.18.1-osera-00012, whose .osera/patch-evidence.yaml records the tests that ran
